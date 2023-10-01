@@ -1,4 +1,4 @@
-# Binary Classification with Neural Networks and Bayesian Optimization
+# Binary Classification with Neural Networks and Bayesian Optimization and SHAP Model Explanations
 
 In the context of neural networks and hyperparameter tuning, Bayesian Optimization offers several advantages over traditional methods like Grid Search or Randomized Search Cross-Validation (CV). Bayesian Optimization is often superior because of the following:
 
@@ -16,3 +16,10 @@ In the context of neural networks and hyperparameter tuning, Bayesian Optimizati
 
  *   Parallelization: Bayesian Optimization's adaptability and efficient exploration make it well-suited for parallel execution, effectively distributing evaluations.
 
+## In this notebook, I have attempted to demonstrate the effectiveness of Bayesian Optimization, along with some advanced techniques for preprocessing.
+1. Missing values have been imputed with Decision Trees.
+2. Used the Kolmogorov-Smirnov test to evaluate whether the distributions are Gaussian or not, and Used Standard Scaling on the non-Gaussian features.
+3. Used a variety of shallow neural network architectures for Binary Classification task.
+4. Applied Bayesian Optimization from kerastuners class for hyperparameter tuning across a massive search space.
+5. Refitted the model with the best parameters to achieve an **Accuracy of 98%** and an **F1-score of 97% and 99% on minority and majority classes, respectively.**
+6. Explained the model using the SHAP library's functions and visualized feature contributions,  for a single and multiple observations. 
